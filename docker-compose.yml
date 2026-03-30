@@ -1,0 +1,12 @@
+
+services:
+  billing-service:
+    build: ./billing-service/billing-service
+    ports:
+      - "9090:9090"
+    networks:
+      - healthcare-network
+
+networks:
+  healthcare-network:
+    driver: bridge
